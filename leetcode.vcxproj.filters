@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="1870准时到达的列车最小时速.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="34在排序数组中查找元素的第一个和最后一个位置.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="1898. 可移除字符的最大数目.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="415.字符串大数相加.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="43.字符串相乘.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="304.矩阵区域和.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="370.区间加法.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="2132.邮票铺满网格.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="3.无重复字符子串.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="713. 乘积小于 K 的子数组.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="56.合并区间.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="排序.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
