@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -139,7 +139,11 @@
     <ClInclude Include="43.字符串相乘.h" />
     <ClInclude Include="56.合并区间.h" />
     <ClInclude Include="713. 乘积小于 K 的子数组.h" />
+    <ClInclude Include="907.子数组最小元素之和.h" />
+    <ClInclude Include="技法：分差数组.h" />
+    <ClInclude Include="技法：单调栈.h" />
     <ClInclude Include="排序.h" />
+    <ClInclude Include="每日温度.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

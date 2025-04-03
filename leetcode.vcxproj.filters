@@ -51,6 +51,18 @@
     <ClInclude Include="排序.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="技法：分差数组.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="技法：单调栈.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="每日温度.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="907.子数组最小元素之和.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

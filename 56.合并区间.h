@@ -2,13 +2,16 @@
 #include <vector>
 using std::vector;
 
+/*
+	难度中等
+
+	由于给出了区间，所以可以很容易得到diff数组
+	对diff数组进行求前 n项和可以得到
+
+*/
+
 class Solution {
 public:
-	bool overlap(int x1, int y1, int x2, int y2)const
-	{
-		return (x2 <= y1 && x1 <= y2);
-	}
-
 	vector<vector<int>> merge(vector<vector<int>>& intervals)
 	{
 		if (intervals.empty())return {};
