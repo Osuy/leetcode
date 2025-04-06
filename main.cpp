@@ -17,7 +17,7 @@ int main()
 	};
 
 	vector<int> arr{ 110,100,0, 9, 43, 67,88,4,12 };
-	qsort(arr);
+	shell_sort(arr);
 	
 	obj.possibleToStamp(matrix,  2, 2);
 	return 0;

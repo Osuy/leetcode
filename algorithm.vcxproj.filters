@@ -63,6 +63,30 @@
     <ClInclude Include="907.子数组最小元素之和.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="42接雨水.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="962最大坡宽度.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="三数之和.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="209和大于给定值的子数组的最小长度.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="技法：双指针、滑动窗口.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="数据结构\树.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="数据结构\链表.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="数据结构\哈希表.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

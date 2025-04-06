@@ -22,15 +22,37 @@ public:
 
 		int res = 0;
 		unordered_map<char, int> map;
-		for (int i = 0, j = 0;j < s.length();++j)
-		{
-			while (0 < map[s[j]])
-			{
-				map[s[i++]]--;
-			}
 
-			++map[s[j]];
-			res = std::max(res, j - i + 1);
+		{
+			for (int i = 0, j = 0;j < s.length();++j)
+			{
+				// 如果已经出现过字符 s[j]，左界前进直到 s[j]个数为0
+				while (0 < map[s[j]])
+				{
+					map[s[i++]]--;
+				}
+
+				// s[j] 字符数量自增，更新长度
+				++map[s[j]];
+				res = std::max(res, j - i + 1);
+			}
+		}
+
+		{
+			res = 0;
+			int l = 0, r = 0;
+			while (r < s.length())
+			{
+				// 如果已经出现过字符 s[j]，左界前进直到 s[j]个数为0
+				while (0 < map[s[r]])
+				{
+					map[s[l++]]--;
+				}
+
+				// s[j] 字符数量自增，更新长度
+				++map[s[r++]];
+				res = std::max(res, r - l);
+			}
 		}
 
 		return res;
