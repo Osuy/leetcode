@@ -15,37 +15,37 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="1870准时到达的列车最小时速.h">
+    <ClInclude Include="leetcode\1870准时到达的列车最小时速.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="34在排序数组中查找元素的第一个和最后一个位置.h">
+    <ClInclude Include="leetcode\34在排序数组中查找元素的第一个和最后一个位置.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="1898. 可移除字符的最大数目.h">
+    <ClInclude Include="leetcode\1898. 可移除字符的最大数目.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="415.字符串大数相加.h">
+    <ClInclude Include="leetcode\415.字符串大数相加.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="43.字符串相乘.h">
+    <ClInclude Include="leetcode\43.字符串相乘.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="304.矩阵区域和.h">
+    <ClInclude Include="leetcode\304.矩阵区域和.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="370.区间加法.h">
+    <ClInclude Include="leetcode\370.区间加法.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="2132.邮票铺满网格.h">
+    <ClInclude Include="leetcode\2132.邮票铺满网格.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="3.无重复字符子串.h">
+    <ClInclude Include="leetcode\3.无重复字符子串.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="713. 乘积小于 K 的子数组.h">
+    <ClInclude Include="leetcode\713. 乘积小于 K 的子数组.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="56.合并区间.h">
+    <ClInclude Include="leetcode\56.合并区间.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="排序.h">
@@ -60,19 +60,19 @@
     <ClInclude Include="每日温度.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="907.子数组最小元素之和.h">
+    <ClInclude Include="leetcode\907.子数组最小元素之和.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="42接雨水.h">
+    <ClInclude Include="leetcode\42接雨水.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="962最大坡宽度.h">
+    <ClInclude Include="leetcode\962最大坡宽度.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="三数之和.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="209和大于给定值的子数组的最小长度.h">
+    <ClInclude Include="leetcode\209和大于给定值的子数组的最小长度.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="技法：双指针、滑动窗口.h">
@@ -87,9 +87,18 @@
     <ClInclude Include="数据结构\哈希表.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="数据结构\图.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\416分割等和子集.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="数据结构\链表.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

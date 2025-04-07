@@ -90,7 +90,8 @@ void insert_sort(vector<int>& arr)
 	前文提到插入排序利用了已排序区间有序的特征，向其中插入新元素。时间复杂度最好的情况是O(n)
 	那假如提前对数组处理，使它整体有序，就能优化插入排序。
 	希尔排序的想法是，把数组分为多个组，每个组有两个元素，然后将每个组都调整为小的在前，大的在后
-	然后又要满足整体上小的在前大的在后。分组应该是0和N/2一组，1和N/2+1一组。。。。
+	那要怎么分组呢？是两两一组吗？不是。是将整个数组分为前半部分和后半部分，然后每个部分的元素一一组队
+	经过一次“调整”后，就满足总体上大的再后面小的在前面
 	而这种“调整”就是插入排序。
 
 	当完成一次上述操作后，分组扩大为两倍，重复操作
@@ -123,6 +124,18 @@ void shell_sort(vector<int>& arr)
 	}
 }
 
+/*
+	快速排序
+	二叉树前序遍历思维
+	先取一个基准（为方便直接使用第0个元素，一般要随机取）
+	然后将所有小于基准的放到前面，将大于等于基准的放到后面，然后基准放到中间
+	之后再对左边子数组和右边子数组重复操作
+	每次操作遍历N次，并分为两份重复操作，一共重复logN次操作，所以时间复杂度是O(NlogN)
+
+	因为是原地排序，空间复杂度O(1)
+	但是对于（与基准）相同元素，原先在基准前后都可能，但是都会排到基准后面，顺序发生改变
+	所以是不稳定的排序
+*/
 void qsort(vector<int>& nums, int l, int r)
 {
 	// 区间长度仅为1或边界无效，返回
@@ -149,4 +162,187 @@ void qsort(vector<int>& nums, int l, int r)
 void qsort(vector<int>& nums)
 {
 	qsort(nums, 0, nums.size());
+}
+
+/*
+	归并排序
+	二叉树后续遍历，先将两个子数组排序，然后合并
+
+	迭代法
+		先从长度1的数组开始两两合并
+		然后是长度2，两两合并
+		由于数组长度不一定是2的幂次
+		所以最后会有一大一小，大的是2的幂次，小的任意
+		然后再对这一大一小进行合并
+*/
+void merge_sort(vector<int>& nums, int l, int r)
+{
+	if (r - l < 2)
+	{
+		return;
+	}
+
+	int mid = (l + r) / 2;
+	merge_sort(nums, l, mid);
+	merge_sort(nums, mid, r);
+	vector<int> tmp = nums;
+
+	//将两个区间合并
+	int p1 = l, p2 = mid;
+	while (p1 < mid && p2 < r)
+	{
+		if (nums[p1] < nums[p2])
+		{
+			tmp[l++] = nums[p1++];
+		}
+		else
+		{
+			tmp[l++] = nums[p2++];
+		}
+	}
+
+	while (p1 < mid)
+	{
+		tmp[l++] = nums[p1++];
+	}
+
+	while (p2 < r)
+	{
+		tmp[l++] = nums[p2++];
+	}
+
+	nums.swap(tmp);
+}
+
+void merge_sort(vector<int>& nums)
+{
+	merge_sort(nums, 0, nums.size());
+}
+
+void merge_sort2(vector<int>& nums)
+{
+	vector<int> tmp = nums;
+	int size = nums.size();
+	// 自数组大小从1开始，每次翻倍，直到超过size
+	int i = 1;
+	for (; i < size; i *= 2)
+	{
+		// 每两个子数组进行合并
+		for (int j = 0; j < size; j += 2 * i)
+		{
+			int l = j, r = std::min(j + 2 * i, size);
+			int mid = (l + r) >> 1;
+			int p1 = l, p2 = mid;
+			int start = l;
+			while (p1 < mid && p2 < r)
+			{
+				if (nums[p1] < nums[p2])
+				{
+					tmp[start++] = nums[p1++];
+				}
+				else
+				{
+					tmp[start++] = nums[p2++];
+				}
+			}
+
+			while (p1 < mid)
+			{
+				tmp[start++] = nums[p1++];
+			}
+
+			while (p2 < r)
+			{
+				tmp[start++] = nums[p2++];
+			}
+		}
+		nums.swap(tmp);
+	}
+
+	// 最后一次分组，可能会有一大一小两组而i已经超出了size，所以再执行一次合并
+	int l = 0, r = size;
+	int mid = i / 2;
+	int p1 = l, p2 = mid;
+	int start = l;
+	while (p1 < mid && p2 < r)
+	{
+		if (nums[p1] < nums[p2])
+		{
+			tmp[start++] = nums[p1++];
+		}
+		else
+		{
+			tmp[start++] = nums[p2++];
+		}
+	}
+
+	while (p1 < mid)
+	{
+		tmp[start++] = nums[p1++];
+	}
+
+	while (p2 < r)
+	{
+		tmp[start++] = nums[p2++];
+	}
+
+	nums.swap(tmp);
+}
+
+void heap_sort(vector<int>& nums)
+{
+	int size = nums.size();
+
+	//// 先对数组构件大顶堆，从前往后对每个元素上浮
+	//for (int i = 1;i < size;++i)
+	//{
+	//	int n = i;
+	//	while (nums[(n - 1) / 2] < nums[n] && n > 0)
+	//	{
+	//		std::swap(nums[n], nums[(n - 1) / 2]);
+	//		n = (n - 1) / 2;
+	//	}
+	//}
+
+	// 构建大顶堆优化：从最后一个非叶子节点开始下沉
+	// 因为只要左右子堆是大顶堆，对自己下沉就能得到大顶堆，于是应该从后往前遍历，而叶子节点没有左右子堆，所以是从最后一个非叶子节点开始
+	// 假设二叉堆有i+1行，最后一行的节点数为k，倒数第二节点为2^(i-1)个，总共有2^i-1+k个节点
+	// 叶子节点有k+ 2^(i-1) - (k+1)/2 = (2k+2^i-k-1)/2 = (2^i+k-1)/2 个，刚好是总节点数的一半
+	// 或者：最后一个节点是size-1，它的父节点一定是最后一个非叶子节点，即 (size-1 - 1)/2 = size/2 - 1
+	for (int i = size / 2 - 1;i >=0; --i)
+	{
+		int n = i;
+		while (2 * n + 2 < size || 2 * n + 1 < size)
+		{
+			int max = n;
+			if (2 * n + 1 < size && nums[max] < nums[2 * n + 1]) max = 2 * n + 1;
+
+			if (2 * n + 2 < size && nums[max] < nums[2 * n + 2]) max = 2 * n + 2;
+
+			if (max == n) break;
+
+			std::swap(nums[n], nums[max]);
+			n = max;
+		}
+	}
+
+	// 将首个元素和末尾互换，然后对首元素下沉
+	// 最大的元素放到了末尾，然后再次调整大顶堆使剩下的最大元素放在堆顶，等待下一次互换，重复size-1次
+	for (int i = size - 1; i >= 0; --i)
+	{
+		std::swap(nums[i], nums[0]);
+		int n = 0;
+		while (2 * n + 2 < i || 2 * n + 1  < i)
+		{
+			int max = n;
+			if (2 * n + 1 < i && nums[max] < nums[2 * n + 1]) max = 2 * n + 1;
+
+			if (2 * n + 2 < i && nums[max] < nums[2 * n + 2]) max = 2 * n + 2;
+			
+			if (max == n) break;
+
+			std::swap(nums[n], nums[max]);
+			n = max;
+		}
+	}
 }

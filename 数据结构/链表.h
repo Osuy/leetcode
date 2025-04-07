@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <deque>
 
 /*
 	链表相关的算法无非就是操作pre和next以及next->next等
@@ -54,13 +55,13 @@
 class list_t
 {
 public:
-	struct list_node_t
+	struct node_t
 	{
 		int val = 0;
-		list_node_t* next = nullptr;
+		node_t* next = nullptr;
 	};
 private:
-	list_node_t _dummy{};
+	node_t _dummy{};
 public:
 	list_t() {}
 	list_t(const std::vector<int>& arr)
@@ -68,7 +69,7 @@ public:
 		auto node = &_dummy;
 		for (int i = 0; i < arr.size(); ++i)
 		{
-			node->next = new list_node_t{ arr[i] };
+			node->next = new node_t{ arr[i] };
 			node = node->next;
 		}
 	}
@@ -93,7 +94,7 @@ public:
 	}
 
 	void addAtHead(int val) {
-		auto node = new list_node_t{ val };
+		auto node = new node_t{ val };
 		node->next = _dummy.next;
 		_dummy.next = node;
 	}
@@ -101,7 +102,7 @@ public:
 	void addAtTail(int val) {
 		auto node = &_dummy;
 		while (node->next) node = node->next;
-		node->next = new list_node_t{ val };
+		node->next = new node_t{ val };
 	}
 
 	void addAtIndex(int index, int val) {
@@ -110,7 +111,7 @@ public:
 		if (index < 0)
 		{
 			auto t = node->next;
-			node->next = new list_node_t{ val };
+			node->next = new node_t{ val };
 			node->next->next = t;
 		}
 	}
@@ -126,7 +127,7 @@ public:
 		}
 	}
 
-	list_node_t* get_last_n(int n)
+	node_t* get_last_n(int n)
 	{
 		auto p1 = &_dummy;
 
@@ -134,7 +135,7 @@ public:
 		int m = n;
 		while (p1 && m--) p1 = p1->next;
 
-		if (!p1)return;
+		if (!p1)return nullptr;
 
 		// p2和p1开始同步前进
 		auto p2 = &_dummy;
@@ -147,7 +148,7 @@ public:
 		return p2;
 	}
 
-	list_node_t* get_last_mid()
+	node_t* get_last_mid()
 	{
 		auto p1 = &_dummy;
 		auto p2 = &_dummy;
@@ -181,7 +182,7 @@ public:
 		return false;
 	}
 
-	list_node_t* get_circle_start()
+	node_t* get_circle_start()
 	{
 		auto p1 = &_dummy;
 		auto p2 = &_dummy;
@@ -204,7 +205,7 @@ public:
 		return p1;
 	}
 
-	list_node_t* get_cross(list_node_t* list1, list_node_t*list2)const
+	node_t* get_cross(node_t* list1, node_t*list2)const
 	{
 		auto p1 = list1;
 		auto p2 = list2;
@@ -226,4 +227,6 @@ public:
 
 		return p1;
 	}
+
+	static node_t* mergeKLists(std::vector<node_t*>& lists);
 };
