@@ -93,6 +93,12 @@
     <ClInclude Include="leetcode\416分割等和子集.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="leetcode\5最长回文子串.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\凑硬币.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

@@ -149,6 +149,7 @@
     <ClInclude Include="leetcode\713. 乘积小于 K 的子数组.h" />
     <ClInclude Include="leetcode\907.子数组最小元素之和.h" />
     <ClInclude Include="leetcode\962最大坡宽度.h" />
+    <ClInclude Include="leetcode\凑硬币.h" />
     <ClInclude Include="三数之和.h" />
     <ClInclude Include="技法：分差数组.h" />
     <ClInclude Include="技法：单调栈.h" />
