@@ -150,6 +150,7 @@
     <ClInclude Include="leetcode\907.子数组最小元素之和.h" />
     <ClInclude Include="leetcode\962最大坡宽度.h" />
     <ClInclude Include="三数之和.h" />
+    <ClInclude Include="奇技淫巧.h" />
     <ClInclude Include="技法：分差数组.h" />
     <ClInclude Include="技法：单调栈.h" />
     <ClInclude Include="技法：双指针、滑动窗口.h" />
