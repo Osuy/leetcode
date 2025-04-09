@@ -19,9 +19,9 @@ using std::vector;
 string longestPalindrome(string s)
 {
 	int len = s.length();
-	auto is_palindrome = [&](int i, int j)->bool
+	auto is_palindrome = [&](int i, int j) -> bool
 		{
-			while (i < j && i >= 0 && j < len && s[i] == s[j])
+			while (0 <= i && i < j && j < len && s[i] == s[j]) // 从两端往里
 			{
 				++i, --j;
 			}
@@ -32,7 +32,7 @@ string longestPalindrome(string s)
 	int begin = 0;
 	for (int i = 0;i < len;++i)
 	{
-		for (int j = i;j < len;++j)
+		for (int j = i; j < len;++j)
 		{
 			if (is_palindrome(i, j) && j - i + 1 > max_len)
 			{
@@ -67,8 +67,8 @@ string longestPalindrome2(string s)
 	int max_len = 0;
 	auto find_max_palindrome = [&](int i, int j)
 		{
-			if (i > j)return;
-			if (i < 0 || j >= len)return;
+			if (j < i)return;
+			if (i < 0 || len <= j)return;
 			if (s[i] != s[j])return;
 
 			while (0 <= i && j < len && s[i] == s[j])
@@ -77,7 +77,7 @@ string longestPalindrome2(string s)
 			}
 
 			int len = j - i - 1;
-			if (len > max_len)
+			if (max_len < len)
 			{
 				begin = i + 1;
 				max_len = len;
@@ -98,15 +98,16 @@ string longestPalindrome2(string s)
 	难点在于推导联动方程
 	首先是一维：不适用。因为一维的推导必然是：s[0,len)的最长回文子串是：1.如果s[0,len-1)的最长回文子串在末尾，且s[len-1]== s[k],
 		k 是回文子串的前一个字符，则 s[0,len)的最长回文子串是 s[k]##s[0,len-1)的最长回文子串##s[len-1]
-		但是，者并不靠偶数回文串和奇数回文串（前两种方法的lambda表达式里的返回值能够处理奇数和偶数）
+		但是，这没考虑偶数回文串和奇数回文串（前两种方法的lambda表达式里的返回值能够处理奇数和偶数）
 		对于回文串是全是一个字符的情况，如aaaaaa，假如s[len-1]也是a，但s[k]不是a，则不能检查出。
 		原因是这样的方程不确定左边界，仅仅只是考 k 是回文子串的前一个字符 去推导。
 		而中心扩散和暴力算法都是确定的左边界
 
 	二维：结合上文的分析，回文串至少需要起点和终点两个要素来确定，于是要用二维dp。（一般题目都要用二维，一维属于瞪眼就能看出来）
+		(实际上一维dp也能做，只是方程不容易推导，第五种解法就是一维dp)
 		假设dp[i][j]表示以i为起点，j为终点的子串是否是回文串
 		则有1.i==j时，true
-			2.i+1==j 且是s[i]==s[j],true // 其实也可以和1合并，因为i==j则s[i]==s[j]
+			2.i+1==j 且是s[i]==s[j],true // 其实也可以和1合并，因为i==j则s[i]==s[j]。合并为：j-i+1<3 时 s[i]==s[j]
 			3.s[i]==s[j] && dp[i+1][j-1]
 
 		注意：由于dp[i][j]依赖于dp[i+1][j-1]，而ij双循环遍历到i时，下一循环i+1的行还未确定。
@@ -118,6 +119,10 @@ string longestPalindrome2(string s)
 		此时dp[i+1][j-1] = dp[i+1][i+k-2]= dp[3][4] = dp[3][3+2-1];//i' = 3, k' = 2
 		k' < k 而外循环是k，所以k'=2的所有子串已经确定了
 		（当然也可以理解为起点为i长度为j-i+1的子串依赖于起点为i+1长度为j-i-1的子串，即短的子串先确定，长的子串才能确定（ps：这句话不分析也能知道））
+		修改后的状态转移方程为：
+			长度为k，起点为i的字串是否时回文串取决于
+			1.k<3时 s[i] == s[j]
+			2.其他s[i] == s[j] && dp[i + 1][j - 1];
 
 */
 
@@ -148,3 +153,107 @@ string longestPalindrome3(string s)
 	return s.substr(begin, max_len);
 }
 
+string longestPalindrome4(string s)
+{
+	int res = 0;
+	int len = s.length();
+	// 准备一个字符串，每个字符间添加一个#字符
+	vector<char> tmp(2 * len + 1);
+	tmp[0] = '#';
+	for (int i = 1;i < tmp.size(); i += 2)
+	{
+		tmp[i] = s[(i - 1) / 2];
+		tmp[i + 1] = '#';
+	}
+
+	vector<unsigned long long> hl(tmp.size(), 0), hr(tmp.size(), 0), p(tmp.size(), 1);
+	for (int i = 1, j = tmp.size() - 1;i < tmp.size();i++, j--)
+	{
+		hl[i] = hl[i - 1] * 131 + tmp[i] - 'a' + 1;
+		hr[i] = hr[i - 1] * 131 + tmp[j] - 'a' + 1;
+		p[i] = p[i - 1] * 131;
+	}
+
+	auto get_hash = [&p](vector<unsigned long long>& h, int l, int r)
+		{
+			return h[r] - h[l - 1] * p[r - l + 1];
+		};
+	for (int i = 1;i < tmp.size() - 1;i++)
+	{
+		int l = 0, r = std::min(i - 1, 2 * len - i);
+		while (l < r)
+		{
+			int mid = l + r + 1 >> 1;
+			if (get_hash(hl, i - mid, i - 1) 
+				== get_hash(hr, 2 * len - (mid + i) + 1, 2 * len - (i + 1) + 1))
+			{
+				l = mid;
+			}
+			else
+			{
+				r = mid - 1;
+			}
+
+			if (tmp[i - l] == '#')
+			{
+
+			}
+		}
+	}
+}
+
+/*
+	
+*/
+string longestPalindrome5(string s)
+{
+	int len = s.length();
+	vector<int> half(len, 1);
+
+	int max_i = 0;
+	// 单字符
+	for (int r = 1;r < len;++r)
+	{
+		int l = r - 2 * half[r - 1];
+		if (0 <= l && s[l] == s[r])
+		{
+			half[r] = half[r - 1] + 1;
+			if (half[max_i] < half[r])
+			{
+				max_i = r;
+			}
+		}
+
+		int r2 = r + 1;
+		int l2 = 2 * r - r2;
+		while (r2 < len && 0 <= l2 &&s[r2] ==s[l2])
+		{
+			r2++, l2--;
+		}
+
+		half[r2 - 1] = (r2 - l2 + 1) / 2;
+		if (half[max_i] < half[r2 - 1])
+		{
+			max_i = r2 - 1;
+		}
+	}
+
+	// 双字符
+	for (int r = 0;r < len;++r)
+	{
+		int r2 = r + 1;
+		int l2 = r;
+		while (r2 < len && 0 <= l2 && s[r2] == s[l2])
+		{
+			r2++, l2--;
+		}
+
+		half[r2 - 1] = (r2 - l2 + 1) / 2;
+		if (half[max_i] < half[r2 - 1])
+		{
+			max_i = r2 - 1;
+		}
+	}
+
+	return s.substr(max_i - 2 * half[max_i] + 2, 2 * half[max_i] - 1);
+}
