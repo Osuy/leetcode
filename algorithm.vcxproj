@@ -138,6 +138,7 @@
     <ClInclude Include="leetcode\2132.邮票铺满网格.h" />
     <ClInclude Include="leetcode\3.无重复字符子串.h" />
     <ClInclude Include="leetcode\304.矩阵区域和.h" />
+    <ClInclude Include="leetcode\322凑零钱.h" />
     <ClInclude Include="leetcode\34在排序数组中查找元素的第一个和最后一个位置.h" />
     <ClInclude Include="leetcode\370.区间加法.h" />
     <ClInclude Include="leetcode\415.字符串大数相加.h" />
@@ -147,18 +148,23 @@
     <ClInclude Include="leetcode\56.合并区间.h" />
     <ClInclude Include="leetcode\5最长回文子串.h" />
     <ClInclude Include="leetcode\713. 乘积小于 K 的子数组.h" />
+    <ClInclude Include="leetcode\752转盘锁.h" />
+    <ClInclude Include="leetcode\773滑动谜题.h" />
     <ClInclude Include="leetcode\907.子数组最小元素之和.h" />
     <ClInclude Include="leetcode\962最大坡宽度.h" />
-    <ClInclude Include="三数之和.h" />
+    <ClInclude Include="leetcode\15.三数之和.h" />
+    <ClInclude Include="leetcode\分支限界bfs.h" />
+    <ClInclude Include="动态规划.h" />
+    <ClInclude Include="回溯法.h" />
     <ClInclude Include="奇技淫巧.h" />
-    <ClInclude Include="技法：分差数组.h" />
-    <ClInclude Include="技法：单调栈.h" />
-    <ClInclude Include="技法：双指针、滑动窗口.h" />
+    <ClInclude Include="分差数组.h" />
+    <ClInclude Include="单调栈.h" />
+    <ClInclude Include="双指针、滑动窗口.h" />
     <ClInclude Include="排序.h" />
     <ClInclude Include="数据结构\哈希表.h" />
     <ClInclude Include="数据结构\图.h" />
     <ClInclude Include="数据结构\树.h" />
-    <ClInclude Include="每日温度.h" />
+    <ClInclude Include="leetcode\739.每日温度.h" />
     <ClInclude Include="数据结构\链表.h" />
   </ItemGroup>
   <ItemGroup>
