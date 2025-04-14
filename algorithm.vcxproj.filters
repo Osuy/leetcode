@@ -126,6 +126,12 @@
     <ClInclude Include="leetcode\base_header.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="leetcode\5最长回文子串.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\凑硬币.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
