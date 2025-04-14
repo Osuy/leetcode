@@ -1,8 +1,5 @@
 #pragma once
-#include <string>
-#include <vector>
-using std::string;
-using std::vector;
+#include "base_header.h"
 /*
 	难度：中等
 

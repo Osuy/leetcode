@@ -1,8 +1,5 @@
 #pragma once
-#include <queue>
-#include <vector>
-#include <string>
-#include <unordered_set>
+#include "base_header.h"
 
 /*
 	켜똑：위켜
@@ -19,6 +16,8 @@
 
 int slidingPuzzle(std::vector<std::vector<int>>& board) {
 	std::string target = "123450";
+	std::priority_queue < int, std::vector<int>, std::greater<int>> q;
+	q.top();
 	std::string origin;
 	int i_index = 0;
 	for (auto& el : board)

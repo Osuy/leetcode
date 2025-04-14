@@ -1,7 +1,5 @@
 #pragma once
-
-#include <string>
-using std::string;
+#include "base_header.h"
 
 /*
 	拆解为 一个字符和一个字符串相乘 以及 一组字符串累加 两个问题

@@ -51,15 +51,6 @@
     <ClInclude Include="排序.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="技法：分差数组.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="技法：单调栈.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="每日温度.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="leetcode\907.子数组最小元素之和.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -69,13 +60,7 @@
     <ClInclude Include="leetcode\962最大坡宽度.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="三数之和.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="leetcode\209和大于给定值的子数组的最小长度.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="技法：双指针、滑动窗口.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="数据结构\树.h">
@@ -91,6 +76,54 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="leetcode\416分割等和子集.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\322凑零钱.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\5最长回文子串.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\752转盘锁.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\773滑动谜题.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\15.三数之和.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="分支限界bfs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="动态规划.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="回溯法.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="奇技淫巧.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="分差数组.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="单调栈.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="双指针、滑动窗口.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\739.每日温度.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\365水壶问题.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\221最大正方形.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\base_header.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

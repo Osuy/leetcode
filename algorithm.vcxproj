@@ -136,10 +136,12 @@
     <ClInclude Include="leetcode\1898. 可移除字符的最大数目.h" />
     <ClInclude Include="leetcode\209和大于给定值的子数组的最小长度.h" />
     <ClInclude Include="leetcode\2132.邮票铺满网格.h" />
+    <ClInclude Include="leetcode\221最大正方形.h" />
     <ClInclude Include="leetcode\3.无重复字符子串.h" />
     <ClInclude Include="leetcode\304.矩阵区域和.h" />
     <ClInclude Include="leetcode\322凑零钱.h" />
     <ClInclude Include="leetcode\34在排序数组中查找元素的第一个和最后一个位置.h" />
+    <ClInclude Include="leetcode\365水壶问题.h" />
     <ClInclude Include="leetcode\370.区间加法.h" />
     <ClInclude Include="leetcode\415.字符串大数相加.h" />
     <ClInclude Include="leetcode\416分割等和子集.h" />
@@ -153,7 +155,8 @@
     <ClInclude Include="leetcode\907.子数组最小元素之和.h" />
     <ClInclude Include="leetcode\962最大坡宽度.h" />
     <ClInclude Include="leetcode\15.三数之和.h" />
-    <ClInclude Include="leetcode\分支限界bfs.h" />
+    <ClInclude Include="leetcode\base_header.h" />
+    <ClInclude Include="分支限界bfs.h" />
     <ClInclude Include="动态规划.h" />
     <ClInclude Include="回溯法.h" />
     <ClInclude Include="奇技淫巧.h" />

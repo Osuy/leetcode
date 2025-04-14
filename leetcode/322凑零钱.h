@@ -1,7 +1,5 @@
 #pragma once
-#include <vector>
-#include <functional>
-using std::vector;
+#include "base_header.h"
 /*
 	凑零钱
 	给出n种零钱，求能凑数指定数目的最小硬币数
@@ -76,7 +74,7 @@ int coinChange3(vector<int>& coins, int amount)
 {
 	vector<int> memo(amount + 1, -2);
 
-	std::function<int(vector<int>&, int)> dp = [&dp, &memo](vector<int>& coins, int amount)->int
+	function<int(vector<int>&, int)> dp = [&dp, &memo](vector<int>& coins, int amount)->int
 		{
 			if (amount < 0)return -1;
 			if (amount == 0)return 0;

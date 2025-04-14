@@ -1,6 +1,5 @@
 #pragma once
-#include <vector>
-using std::vector;
+#include "base_header.h"
 
 /*
 	难度中等

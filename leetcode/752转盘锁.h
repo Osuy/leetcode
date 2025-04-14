@@ -1,8 +1,5 @@
 #pragma once
-#include <queue>
-#include <vector>
-#include <string>
-#include <unordered_set>
+#include "base_header.h"
 
 /*
 	难度中等
