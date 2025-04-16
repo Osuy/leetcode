@@ -129,7 +129,10 @@
     <ClInclude Include="leetcode\5最长回文子串.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="leetcode\凑硬币.h">
+    <ClInclude Include="leetcode\1143最长公共子序列.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\638大礼包.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

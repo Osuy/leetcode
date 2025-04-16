@@ -132,6 +132,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="leetcode\1143最长公共子序列.h" />
     <ClInclude Include="leetcode\1870准时到达的列车最小时速.h" />
     <ClInclude Include="leetcode\1898. 可移除字符的最大数目.h" />
     <ClInclude Include="leetcode\209和大于给定值的子数组的最小长度.h" />
@@ -149,6 +150,7 @@
     <ClInclude Include="leetcode\43.字符串相乘.h" />
     <ClInclude Include="leetcode\56.合并区间.h" />
     <ClInclude Include="leetcode\5最长回文子串.h" />
+    <ClInclude Include="leetcode\638大礼包.h" />
     <ClInclude Include="leetcode\713. 乘积小于 K 的子数组.h" />
     <ClInclude Include="leetcode\752转盘锁.h" />
     <ClInclude Include="leetcode\773滑动谜题.h" />

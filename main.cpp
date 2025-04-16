@@ -5,32 +5,13 @@
 //#include  "数据结构/图.h"
 //#include "数据结构/链表.h"
 #include "leetcode/221最大正方形.h"
+#include "leetcode/638大礼包.h"
 using std::cout;
 using std::endl;
 
-class A
-{
-protected:
-	int a = 0;
-};
-
-void func(A& obj)
-{
-	obj.a;// 不能 访问保护成员
-
-	auto b = struct : public A { using A::a; }{obj};
-
-	[](B&& obj)
-	{
-		obj.a;
-	} ({ obj });
-}
-
-
 int main()
 {
-	A obj;
-	func(obj);
 	cout << test221() << endl;
+	cout << test638() << endl;
 	return 0;
 }
