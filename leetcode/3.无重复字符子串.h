@@ -22,7 +22,6 @@ public:
 
 		int res = 0;
 		unordered_map<char, int> map;
-
 		{
 			for (int i = 0, j = 0;j < s.length();++j)
 			{
