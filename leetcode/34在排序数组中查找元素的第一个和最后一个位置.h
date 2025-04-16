@@ -1,5 +1,5 @@
 #pragma once
-#include <vector>
+#include "base_header.h"
 /*
 	难度：中等
 	类型：二分查找
@@ -13,7 +13,7 @@
 
 class Solution {
 public:
-	std::vector<int> searchRange(std::vector<int>& nums, int target) 
+	vector<int> searchRange(vector<int>& nums, int target) 
 	{
 		// 数组空、数组的最大值小于taget、数组的最小值大于target，都不符合条件，return
 		if (nums.empty() || target < nums.front() || nums.back() < target)

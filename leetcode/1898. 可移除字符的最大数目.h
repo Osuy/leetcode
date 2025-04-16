@@ -1,11 +1,5 @@
 #pragma once
-#include <string>
-#include <span>
-#include <format>
-using std::string;
-using std::string_view;
-using std::span;
-using std::vector;
+#include "base_header.h"
 
 /*
 	难度：中等

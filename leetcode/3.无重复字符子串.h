@@ -1,8 +1,5 @@
 #pragma once
-#include <string>
-#include <unordered_map>
-using std::string;
-using std::unordered_map;
+#include "base_header.h"
 
 /*
 	子串是连续的

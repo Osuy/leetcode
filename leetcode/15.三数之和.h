@@ -1,7 +1,5 @@
 #pragma once
-#include <vector>
-#include <algorithm>
-using std::vector;
+#include "base_header.h"
 
 class Solution {
 public:

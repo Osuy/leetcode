@@ -1,6 +1,5 @@
 #pragma once
-#include <string>
-using std::string;
+#include "base_header.h"
 
 class Solution {
 public:

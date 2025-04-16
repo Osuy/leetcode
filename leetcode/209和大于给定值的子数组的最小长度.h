@@ -1,6 +1,5 @@
 #pragma once
-#include <vector>
-using std::vector;
+#include "base_header.h"
 /*
 	求和大于等于target的子数组的最小长度
 	

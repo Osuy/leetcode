@@ -1,7 +1,5 @@
 #pragma once
-#include <vector>
-using std::vector;
-
+#include "base_header.h"
 /*
 	求每天的下一更大问题的间隔
 	

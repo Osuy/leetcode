@@ -1,5 +1,5 @@
 #pragma once
-#include <span>
+#include "base_header.h"
 
 /*
 	难度：中等
@@ -17,7 +17,7 @@ class Solution
 {
 public:
 	// dist 基于 speed 的花费时间
-	double use_time(std::span<int> dists, int speed)const
+	double use_time(span<int> dists, int speed)const
 	{
 		double res = 0.0;
 		for (int i = 0;i < dists.size() - 1;++i)
@@ -28,7 +28,7 @@ public:
 		return res + ceil((double)dists.back() / speed);
 	}
 	
-	int minSpeedOnTime(std::span<int> dists, double hour)
+	int minSpeedOnTime(span<int> dists, double hour)
 	{
 		if (ceil(hour) < dists.size())
 		{
