@@ -222,7 +222,7 @@ string longestPalindrome5(string s)
 		}
 
 		int r2 = r + 1;
-		int l2 = 2 * r - r2;
+		int l2 = r - 1;
 		while (r2 < len && 0 <= l2 &&s[r2] ==s[l2])
 		{
 			r2++, l2--;

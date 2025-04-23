@@ -1,6 +1,7 @@
 #pragma once
 #include <queue>
 using std::queue;
+using std::priority_queue;
 #include<vector>
 using std::vector;
 #include <string>

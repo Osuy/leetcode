@@ -135,6 +135,21 @@
     <ClInclude Include="leetcode\638大礼包.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="leetcode\373 查找和最小的k对数字.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\378查找矩阵中第k小的元素.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\75颜色分类.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="前缀和.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\1124最长和为正的子数组.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
