@@ -132,6 +132,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="leetcode\1124最长和为正的子数组.h" />
     <ClInclude Include="leetcode\1143最长公共子序列.h" />
     <ClInclude Include="leetcode\1870准时到达的列车最小时速.h" />
     <ClInclude Include="leetcode\1898. 可移除字符的最大数目.h" />
@@ -144,6 +145,8 @@
     <ClInclude Include="leetcode\34在排序数组中查找元素的第一个和最后一个位置.h" />
     <ClInclude Include="leetcode\365水壶问题.h" />
     <ClInclude Include="leetcode\370.区间加法.h" />
+    <ClInclude Include="leetcode\373 查找和最小的k对数字.h" />
+    <ClInclude Include="leetcode\378查找矩阵中第k小的元素.h" />
     <ClInclude Include="leetcode\415.字符串大数相加.h" />
     <ClInclude Include="leetcode\416分割等和子集.h" />
     <ClInclude Include="leetcode\42接雨水.h" />
@@ -153,6 +156,7 @@
     <ClInclude Include="leetcode\638大礼包.h" />
     <ClInclude Include="leetcode\713. 乘积小于 K 的子数组.h" />
     <ClInclude Include="leetcode\752转盘锁.h" />
+    <ClInclude Include="leetcode\75颜色分类.h" />
     <ClInclude Include="leetcode\773滑动谜题.h" />
     <ClInclude Include="leetcode\907.子数组最小元素之和.h" />
     <ClInclude Include="leetcode\962最大坡宽度.h" />
@@ -160,6 +164,7 @@
     <ClInclude Include="leetcode\base_header.h" />
     <ClInclude Include="leetcode\解题思路.h" />
     <ClInclude Include="分支限界bfs.h" />
+    <ClInclude Include="前缀和.h" />
     <ClInclude Include="动态规划.h" />
     <ClInclude Include="回溯法.h" />
     <ClInclude Include="奇技淫巧.h" />
