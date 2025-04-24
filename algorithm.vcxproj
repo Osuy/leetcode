@@ -158,6 +158,7 @@
     <ClInclude Include="leetcode\962最大坡宽度.h" />
     <ClInclude Include="leetcode\15.三数之和.h" />
     <ClInclude Include="leetcode\base_header.h" />
+    <ClInclude Include="leetcode\解题思路.h" />
     <ClInclude Include="分支限界bfs.h" />
     <ClInclude Include="动态规划.h" />
     <ClInclude Include="回溯法.h" />

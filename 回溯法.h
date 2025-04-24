@@ -11,6 +11,7 @@
 		求所有满足条件的选取方式
 		子集/组合由于不考虑顺序，所以选取结构是三角形
 		即某次选了元素i后，下一层选择要从i+1开始
+		考虑第i个元素，为了求所有包含i的子集，将i加入，然后去遍历未考虑的元素（后面的元素）
 		如果从0开始就会出现：
 			选了i再选了j
 			选了j再选了i
@@ -74,3 +75,36 @@
 		排列问题，每层加入未使用元素，于是需要used数组记录使用情况。如果元素有重复，排序，然后跳过未使用的重复项
 			如果选取可重复，则无需记录used
 */
+#include<algorithm>
+// 
+struct structB
+{
+	string s;
+	structB() :s{ __func__ } {}
+	void mfunc() {};
+	void operator()() {}
+};
+
+template<typename T>
+void exec_sfunc(T* in_obj, void(T::*func)())
+{
+	string str = __func__;
+	in_obj->func();
+}
+
+template<typename Func>
+void exec_func(Func&& ffunc)
+{
+	ffunc();
+}
+void func() {}
+void test()
+{
+	structB obj;
+	exec_sfunc(&obj, &structB::operator());
+	auto obj_lambda = []() {};
+	long a = 0;
+	decltype(a) b = a;
+	auto lamdab_fun = &decltype(obj_lambda)::operator();
+	exec_sfunc(obj_lambda, &decltype(obj_lambda)::operator());
+}
