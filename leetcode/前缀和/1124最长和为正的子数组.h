@@ -1,12 +1,12 @@
 #pragma once
-#include "base_header.h"
+#include "../base_header.h"
 /*
 	难度：中等
 	求数组的最长子数组，且该子数组内大于8的元素比小于等于8的元素更多
 
 	思路：首先要注意到只需关系元素是否大于8而不必关系元素本身的值
 	所以可以把元素看作是1（大于8）和-1（小于等于8）然后求解最长的子数组，且子数组的和大于0
-	那么区间、求和就容易联想到用前缀和
+	那么区间、求和，元素可能为负，就容易联想到用前缀和+哈希表
 	和大于0，意味着presum[i] > presum[j]
 	由于presum[0] = 0所以对于任意的presum[i]>0时，[0, i]满足条件
 	presum[i]<=0时，要去寻找最远的j。注意是找最远的而不是最小的，可以不用循环去找
@@ -43,7 +43,6 @@ int longestWPI(vector<int>& hours) {
 			ans = max(ans, i - map[presum[i] - 1]);
 		}
 	}
-
 	return ans;
 }
 /*

@@ -76,6 +76,7 @@
 			如果选取可重复，则无需记录used
 */
 #include<algorithm>
+#include <any>
 // 
 struct structB
 {
@@ -86,7 +87,7 @@ struct structB
 };
 
 template<typename T>
-void exec_sfunc(T* in_obj, void(T::*func)())
+void exec_sfunc(T* in_obj, void(T::* func)())
 {
 	string str = __func__;
 	in_obj->func();
@@ -97,14 +98,20 @@ void exec_func(Func&& ffunc)
 {
 	ffunc();
 }
+
+template<typename T>
+using vfunc_t = void (T::*)();
+
 void func() {}
 void test()
 {
 	structB obj;
 	exec_sfunc(&obj, &structB::operator());
-	auto obj_lambda = []() {};
+	auto obj_lambda = [&]()->void {__func__; return;};
 	long a = 0;
 	decltype(a) b = a;
+
 	auto lamdab_fun = &decltype(obj_lambda)::operator();
-	exec_sfunc(obj_lambda, &decltype(obj_lambda)::operator());
+	vfunc_t<decltype(obj_lambda)> lamdab_fun2 = &decltype(obj_lambda)::operator();
 }
+std::any a = 1;

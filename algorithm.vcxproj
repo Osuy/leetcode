@@ -132,7 +132,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="leetcode\1124最长和为正的子数组.h" />
+    <ClInclude Include="leetcode\前缀和\1124最长和为正的子数组.h" />
     <ClInclude Include="leetcode\1143最长公共子序列.h" />
     <ClInclude Include="leetcode\1870准时到达的列车最小时速.h" />
     <ClInclude Include="leetcode\1898. 可移除字符的最大数目.h" />
@@ -162,6 +162,10 @@
     <ClInclude Include="leetcode\962最大坡宽度.h" />
     <ClInclude Include="leetcode\15.三数之和.h" />
     <ClInclude Include="leetcode\base_header.h" />
+    <ClInclude Include="leetcode\前缀和\2845统计趣味子数组个数.h" />
+    <ClInclude Include="leetcode\前缀和\525.0和1数量相同的最长子数组.h" />
+    <ClInclude Include="leetcode\前缀和\560.和为k的子数组.h" />
+    <ClInclude Include="leetcode\滑动窗口\2799.完全子数组.h" />
     <ClInclude Include="leetcode\解题思路.h" />
     <ClInclude Include="分支限界bfs.h" />
     <ClInclude Include="前缀和.h" />
@@ -172,6 +176,7 @@
     <ClInclude Include="单调栈.h" />
     <ClInclude Include="双指针、滑动窗口.h" />
     <ClInclude Include="排序.h" />
+    <ClInclude Include="数据结构\函数.h" />
     <ClInclude Include="数据结构\哈希表.h" />
     <ClInclude Include="数据结构\图.h" />
     <ClInclude Include="数据结构\树.h" />

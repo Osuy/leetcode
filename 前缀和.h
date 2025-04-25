@@ -14,39 +14,12 @@
 		一、求区间
 		二、运算可逆
 		三、可通过两个区间的逆运算得到答案
+	
+	通常求得的前缀和是区间的右界。（循环计算前缀和，有上一个前缀和计算得来，所以当前往前的都是已知的）
+	而能够明了地知道左界在哪里的题目是很少的，更多是需要头脑风暴求解左界
+	左界本质也是一个已算出的前缀和，所以
+	经常需要配合哈希表记录已经遇到的前缀的索引或次数来加速求解
 
-	前缀和经常需要配合哈希表记录已经遇到的前缀的索引或次数来加速求解
+	如果数组内的元素没有负数，那么一般都可以用滑动窗口来做
+	而如果有负数，则要用前缀和
 */
-
-/*
-	前缀和变体	
-*/
-int longestWPI(vector<int>& hours) {
-	//求前缀和，长度加一，让0也能运算
-	vector<int> presum(hours.size() + 1, 0);
-	for (int i = 0;i < hours.size();++i)
-	{
-		presum[i + 1] = (hours[i] > 8 ? 1 : -1) + presum[i];
-	}
-
-	int ans = 0;
-	unordered_map<int, int>map;
-	for (int i = 0;i < presum.size();++i)
-	{
-		if (!map.contains(presum[i]))
-		{
-			map[presum[i]] = i;
-		}
-
-		if (presum[i] > 0)
-		{
-			ans = max(ans, i);
-		}
-		else if (map.contains(presum[i] - 1))
-		{
-			ans = max(ans, i - map[presum[i] - 1]);
-		}
-	}
-
-	return ans;
-}
