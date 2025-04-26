@@ -2,36 +2,31 @@
 #include "base_header.h"
 
 /*
-	双重循环解法可以解决
+	难度：中等
+	求数组的子数组的元素乘积小k的数量
 
-	如果要用滑动窗口，需要认识到，每向右滑动一格，窗口内的子数组的数量是 j-i+1
-	因为对于新进入窗口的元素 el[j]，新增加的子数组有：
-		1.el[j]
-		2.el[j-1],el[j]
-		...
-		el[i],el[i+1]...el[j-1l,el[j]
-		数量为 j-i+1
+	考虑输入：数组长度尾10^4，且无需，所以用双指针。数组所有元素为正，可以用滑动窗口
+	如果一个子[i, j)的乘积小于k，则它的子数组的乘积也小于k，数量一共是j-i
+	于是滑动窗口右界扩大乘积，当乘积大于k时，左界右移缩小乘积。得到恰好乘积小于k的区间[i,j)
+	ans+=j-i
 		
 */
-class Solution {
-public:
-	int numSubarrayProductLessThanK(vector<int>& nums, int k) {
-		if (k == 0)return 0;
-		int ans = 0;
-		int mul = 1;
-		int size = nums.size();
-		int l = 0, r = 0;
+int numSubarrayProductLessThanK(vector<int>& nums, int k) {
+	if (k == 0)return 0;
+	int ans = 0;
+	int mul = 1;
+	int size = nums.size();
+	int l = 0, r = 0;
 
-		while (r < size)
+	while (r < size)
+	{
+		mul *= nums[r++];
+		while (mul >= k && l < r)
 		{
-			mul *= nums[r++];
-			while (mul >= k && l < r)
-			{
-				mul /= nums[l++];
-			}
-			ans += r - l;
+			mul /= nums[l++];
 		}
-
-		return ans;
+		ans += r - l;
 	}
-};
+
+	return ans;
+}
