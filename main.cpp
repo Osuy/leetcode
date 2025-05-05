@@ -11,11 +11,38 @@
 using std::cout;
 using std::endl;
 
+class A
+{
+public:
+	A() {}
+	A(const A&)
+	{
+		cout << "A::copy contructor" << endl;
+	}
+
+	A& operator=(const A&)
+	{
+		cout << "A::assignment operator" << endl;
+		return *this;
+	}
+};
+
+class B
+{
+public:
+	A a;
+};
+
 int main()
 {
-	std::set<int>  q;
-	std::priority_queue<int, std::greater<>>q;
-	test();
+	B b;
+	B c = b;
+	B d;
+	d = c;
+
+	std::set<int> s;
+	std::priority_queue<int>q;
+	//test();
 	cout << test221() << endl;
 	cout << test638() << endl;
 	return 0;

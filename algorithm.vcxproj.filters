@@ -174,6 +174,24 @@
     <ClInclude Include="leetcode\滑动窗口\1004.最大连续1的个数.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="leetcode\滑动窗口\220.存在重复元素III.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\滑动窗口\424.替换后最长的重复字符串.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\240.查找矩阵.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\二分法\0160.寻找峰值.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\二分法\33搜索旋转（循环）数组.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="二分法.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

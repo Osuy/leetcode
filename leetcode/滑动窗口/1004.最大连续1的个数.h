@@ -32,6 +32,7 @@ int longestOnes(vector<int>& nums, int k)
             sum -= !!!nums[l++];
         ++r;
     }
-
+    
+    std::set<int> set;
     return r - l;
 }

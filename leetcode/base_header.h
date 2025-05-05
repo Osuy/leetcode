@@ -7,6 +7,8 @@ using std::vector;
 #include <string>
 using std::string;
 using std::string_view;
+#include <deque>
+using std::deque;
 
 #include <functional>
 using std::function;
@@ -15,6 +17,13 @@ using std::unordered_set;
 
 #include <unordered_map>
 using std::unordered_map;
+#include <set>
+using std::set;
+using std::multiset;
+
+#include <map>
+using std::map;
+using std::multimap;
 #include <numeric>
 
 #include <algorithm>
