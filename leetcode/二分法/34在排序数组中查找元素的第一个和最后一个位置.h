@@ -1,5 +1,5 @@
 #pragma once
-#include "base_header.h"
+#include "../base_header.h"
 /*
 	难度：中等
 	类型：二分查找
