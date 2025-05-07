@@ -26,4 +26,6 @@ void sortColors(vector<int>& nums) {
 			std::swap(nums[r--], nums[i--]);// 与2区间的前一个元素互换，i需要--，然后循环体++，使其保持不动
 		}
 	}
+	string str;
+	str.erase()
 }

@@ -136,6 +136,7 @@
     <ClInclude Include="leetcode\870.最大优势洗牌、田忌赛马 .h" />
     <ClInclude Include="leetcode\二分法\0160.寻找峰值.h" />
     <ClInclude Include="leetcode\二分法\33搜索旋转（循环）数组.h" />
+    <ClInclude Include="leetcode\广度优先遍历\301.删除无效括号.h" />
     <ClInclude Include="二分法.h" />
     <ClInclude Include="leetcode\前缀和\1124最长和为正的子数组.h" />
     <ClInclude Include="leetcode\1143最长公共子序列.h" />
