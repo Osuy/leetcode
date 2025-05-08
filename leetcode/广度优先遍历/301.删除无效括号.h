@@ -67,6 +67,6 @@ vector<string> removeInvalidParentheses(string s) {
 
 		if (stop)break;
 	}
-
+	string str;
 	return ans;
 }

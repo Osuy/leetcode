@@ -18,9 +18,6 @@
     <ClInclude Include="leetcode\1870准时到达的列车最小时速.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="leetcode\34在排序数组中查找元素的第一个和最后一个位置.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="leetcode\1898. 可移除字符的最大数目.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -39,9 +36,6 @@
     <ClInclude Include="leetcode\2132.邮票铺满网格.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="leetcode\3.无重复字符子串.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="leetcode\713. 乘积小于 K 的子数组.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -52,9 +46,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="leetcode\907.子数组最小元素之和.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="leetcode\42接雨水.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="leetcode\962最大坡宽度.h">
@@ -79,9 +70,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="leetcode\322凑零钱.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="leetcode\5最长回文子串.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="leetcode\752转盘锁.h">
@@ -190,6 +178,33 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="二分法.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\870.最大优势洗牌、田忌赛马 .h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\广度优先遍历\301.删除无效括号.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\滑动窗口\3.无重复字符子串.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\二分法\34在排序数组中查找元素的第一个和最后一个位置.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\单调栈\42接雨水.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\动态规划\5最长回文子串.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\栈与队列\388.文件最长绝对路径.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\栈与队列\155.最小栈.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\栈与队列\239.滑动窗口的最大值.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

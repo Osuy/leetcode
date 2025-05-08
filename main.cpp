@@ -7,6 +7,7 @@
 #include "leetcode/221最大正方形.h"
 #include "leetcode/638大礼包.h"
 #include  "回溯法.h"
+#include "leetcode/栈/388.文件最长绝对路径.h"
 #include <set>
 using std::cout;
 using std::endl;
@@ -45,5 +46,6 @@ int main()
 	//test();
 	cout << test221() << endl;
 	cout << test638() << endl;
+	q388::test();
 	return 0;
 }
