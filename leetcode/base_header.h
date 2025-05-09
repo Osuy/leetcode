@@ -1,4 +1,6 @@
 #pragma once
+#include <stack>
+using std::stack;
 #include <queue>
 using std::queue;
 using std::priority_queue;
