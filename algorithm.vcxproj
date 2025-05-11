@@ -136,8 +136,11 @@
     <ClInclude Include="leetcode\870.最大优势洗牌、田忌赛马 .h" />
     <ClInclude Include="leetcode\二分法\0160.寻找峰值.h" />
     <ClInclude Include="leetcode\二分法\33搜索旋转（循环）数组.h" />
+    <ClInclude Include="leetcode\单调栈\1944.可以看到的人数.h" />
+    <ClInclude Include="leetcode\单调栈\402.移除k位数字.h" />
     <ClInclude Include="leetcode\广度优先遍历\301.删除无效括号.h" />
     <ClInclude Include="leetcode\栈与队列\155.最小栈.h" />
+    <ClInclude Include="leetcode\栈与队列\1670.前中后队列.h" />
     <ClInclude Include="leetcode\栈与队列\239.滑动窗口的最大值.h" />
     <ClInclude Include="leetcode\栈与队列\388.文件最长绝对路径.h" />
     <ClInclude Include="二分法.h" />

@@ -46,7 +46,6 @@ int lengthLongestPath(string input) {
 void test()
 {
     map<int, bool> vn;
-    vn.crbegin()->first
     lengthLongestPath("dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext");
 }
 }
