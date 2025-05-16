@@ -132,19 +132,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="leetcode\105.前序遍历构造二叉树 .h" />
     <ClInclude Include="leetcode\240.查找矩阵.h" />
     <ClInclude Include="leetcode\870.最大优势洗牌、田忌赛马 .h" />
     <ClInclude Include="leetcode\二分法\0160.寻找峰值.h" />
     <ClInclude Include="leetcode\二分法\33搜索旋转（循环）数组.h" />
-    <ClInclude Include="leetcode\栈与队列\单调栈\581.最短无序子数组.h" />
+    <ClInclude Include="leetcode\单调栈\1944.可以看到的人数.h" />
+    <ClInclude Include="leetcode\单调栈\402.移除k位数字.h" />
     <ClInclude Include="leetcode\广度优先遍历\301.删除无效括号.h" />
     <ClInclude Include="leetcode\栈与队列\155.最小栈.h" />
-    <ClInclude Include="leetcode\栈与队列\20.有效的括号.h" />
-    <ClInclude Include="leetcode\栈与队列\单调队列\1425.带限制的子序列和.h" />
-    <ClInclude Include="leetcode\栈与队列\单调队列\239.滑动窗口的最大值.h" />
+    <ClInclude Include="leetcode\栈与队列\1670.前中后队列.h" />
+    <ClInclude Include="leetcode\栈与队列\239.滑动窗口的最大值.h" />
     <ClInclude Include="leetcode\栈与队列\388.文件最长绝对路径.h" />
-    <ClInclude Include="leetcode\栈与队列\895.最大频率栈.h" />
     <ClInclude Include="二分法.h" />
     <ClInclude Include="leetcode\前缀和\1124最长和为正的子数组.h" />
     <ClInclude Include="leetcode\1143最长公共子序列.h" />
@@ -163,7 +161,7 @@
     <ClInclude Include="leetcode\378查找矩阵中第k小的元素.h" />
     <ClInclude Include="leetcode\415.字符串大数相加.h" />
     <ClInclude Include="leetcode\416分割等和子集.h" />
-    <ClInclude Include="leetcode\栈与队列\单调栈\42接雨水.h" />
+    <ClInclude Include="leetcode\单调栈\42接雨水.h" />
     <ClInclude Include="leetcode\43.字符串相乘.h" />
     <ClInclude Include="leetcode\56.合并区间.h" />
     <ClInclude Include="leetcode\动态规划\5最长回文子串.h" />

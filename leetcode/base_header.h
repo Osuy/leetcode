@@ -6,6 +6,8 @@ using std::queue;
 using std::priority_queue;
 #include<vector>
 using std::vector;
+#include <list>
+using std::list;
 #include <string>
 using std::string;
 using std::string_view;
