@@ -9,6 +9,7 @@
 #include  "回溯法.h"
 #include "leetcode/栈与队列/388.文件最长绝对路径.h"
 #include "leetcode/栈与队列/895.最大频率栈.h"
+#include "leetcode/105.前序遍历构造二叉树 .h"
 #include <set>
 using std::cout;
 using std::endl;
@@ -49,5 +50,6 @@ int main()
 	cout << test638() << endl;
 	q388::test();
 	q895::test();
+	q105::test();
 	return 0;
 }
