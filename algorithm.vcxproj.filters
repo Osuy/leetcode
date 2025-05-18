@@ -114,9 +114,6 @@
     <ClInclude Include="leetcode\base_header.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="leetcode\5最长回文子串.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="leetcode\1143最长公共子序列.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -205,6 +202,18 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="leetcode\栈与队列\239.滑动窗口的最大值.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\单调栈\1944.可以看到的人数.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\单调栈\402.移除k位数字.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\栈与队列\1670.前中后队列.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\二叉树\297.二叉树的序列化与反序列化.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
