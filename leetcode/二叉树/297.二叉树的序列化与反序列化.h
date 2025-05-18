@@ -66,7 +66,7 @@ TreeNode* deserialize(string data)
 		}
 	}
 
-	return node;
+	return root;
 }
 
 void test()
