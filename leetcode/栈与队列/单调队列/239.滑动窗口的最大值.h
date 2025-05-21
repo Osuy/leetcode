@@ -1,5 +1,5 @@
 #pragma once
-#include "../base_header.h"
+#include "../../base_header.h"
 
 /*
 	켜똑：위켜
@@ -49,3 +49,19 @@ vector<int> maxSlidingWindow(vector<int>& nums, int k) {
 	ans.rbegin().operator*();
 	return ans;
 }
+
+
+/*
+	0 2 1 3
+	0-0
+
+
+	0 84 47 79 119 214
+	0-0
+	84-1
+
+	-3 -2 -3
+	0 -3 -5 -8 -11 -13 -16
+	0-0
+	-3-1
+*/
