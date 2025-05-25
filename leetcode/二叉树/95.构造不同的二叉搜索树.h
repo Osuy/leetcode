@@ -1,6 +1,6 @@
 #pragma once
 #include "../base_header.h"
-
+#include "TreeNode.h"
 namespace q95
 {
 /*
@@ -12,14 +12,6 @@ namespace q95
 	对于相同的根节点，两个子树不同则为不同的二叉搜索树，所以需后序遍历结构
 	自底向上构造出所有可能的子树，在构造出所有可能的树
 */
-
-struct TreeNode
-{
-	int val = 0;
-	TreeNode* left = nullptr;
-	TreeNode* right = nullptr;
-};
-
 vector<TreeNode*> build(int lo, int hi)
 {
 	// 基于区间去计算

@@ -1,17 +1,7 @@
-#include  "base_header.h"
-
+#include "../base_header.h"
+#include "TreeNode.h"
 namespace q105
 {
-struct TreeNode {
-	int val;
-	TreeNode* left;
-	TreeNode* right;
-	TreeNode() : val(0), left(nullptr), right(nullptr) {}
-	TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-	TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
-
-};
-
 TreeNode* build(span<int> preorder, span<int> inorder) {
 	if (preorder.empty())
 	{

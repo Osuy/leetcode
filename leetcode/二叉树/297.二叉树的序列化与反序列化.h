@@ -1,15 +1,8 @@
 #pragma once
 #include "../base_header.h"
+#include "TreeNode.h"
 namespace q297
 {
-
-struct TreeNode 
-{
-	int val;
-	TreeNode* left = nullptr;
-	TreeNode* right = nullptr;
-	TreeNode(int x) : val(x) {}
-};
 
 TreeNode* deserialize(string data) 
 {

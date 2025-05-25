@@ -10,6 +10,8 @@
 #include "leetcode/栈与队列/388.文件最长绝对路径.h"
 #include "leetcode/栈与队列/1670.前中后队列.h"
 #include "leetcode/二叉树/297.二叉树的序列化与反序列化.h"
+#include "leetcode/二叉树/98.验证二叉搜索树.h"
+#include "leetcode/动态规划/53.最大子数组和.h"
 #include <set>
 using std::cout;
 using std::endl;

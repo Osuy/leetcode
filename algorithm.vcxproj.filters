@@ -222,6 +222,33 @@
     <ClInclude Include="leetcode\二叉树\95.构造不同的二叉搜索树.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="leetcode\数学\69.求平方根.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\数学\50.求幂.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\二叉树\98.验证二叉搜索树.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\二叉树\1373.二叉搜索树的最大和.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\动态规划\53.最大子数组和.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\前缀和\152.最大子数组乘积.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\二叉树\791.翻转二叉树以匹配先序遍历.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\二叉树\TreeNode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\二叉树\105.前序遍历构造二叉树 .h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
