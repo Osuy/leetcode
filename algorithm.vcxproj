@@ -140,6 +140,7 @@
     <ClInclude Include="leetcode\二分法\33搜索旋转（循环）数组.h" />
     <ClInclude Include="leetcode\二叉树\1373.二叉搜索树的最大和.h" />
     <ClInclude Include="leetcode\二叉树\297.二叉树的序列化与反序列化.h" />
+    <ClInclude Include="leetcode\二叉树\437.路径和2.h" />
     <ClInclude Include="leetcode\二叉树\791.翻转二叉树以匹配先序遍历.h" />
     <ClInclude Include="leetcode\二叉树\95.构造不同的二叉搜索树.h" />
     <ClInclude Include="leetcode\二叉树\96.不同的二叉树.h" />

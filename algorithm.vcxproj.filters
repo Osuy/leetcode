@@ -249,6 +249,9 @@
     <ClInclude Include="leetcode\二叉树\105.前序遍历构造二叉树 .h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="leetcode\二叉树\437.路径和2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
