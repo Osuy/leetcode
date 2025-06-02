@@ -30,6 +30,8 @@ using std::map;
 using std::multimap;
 #include <numeric>
 
+#include <sstream>
+using std::stringstream;
 #include <algorithm>
 using std::max;
 using std::min;
@@ -37,3 +39,6 @@ using std::swap;
 
 #include <span>
 using std::span;
+#include <utility>
+
+using std::pair;

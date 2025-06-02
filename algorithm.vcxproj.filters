@@ -252,6 +252,18 @@
     <ClInclude Include="leetcode\二叉树\437.路径和2.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="leetcode\二叉树\1104.之字形路径.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\二叉树\331.验证二叉树的前序序列化.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\二叉树\897.递增顺序搜索树.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\二叉树\687.最长同值路径.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
