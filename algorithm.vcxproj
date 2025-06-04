@@ -108,7 +108,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,6 +136,7 @@
     <ClInclude Include="leetcode\870.最大优势洗牌、田忌赛马 .h" />
     <ClInclude Include="leetcode\二分法\0160.寻找峰值.h" />
     <ClInclude Include="leetcode\二分法\33搜索旋转（循环）数组.h" />
+    <ClInclude Include="leetcode\二叉树\297.二叉树的序列化与反序列化.h" />
     <ClInclude Include="leetcode\单调栈\1944.可以看到的人数.h" />
     <ClInclude Include="leetcode\单调栈\402.移除k位数字.h" />
     <ClInclude Include="leetcode\广度优先遍历\301.删除无效括号.h" />
