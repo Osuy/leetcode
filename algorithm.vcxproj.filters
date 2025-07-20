@@ -273,6 +273,9 @@
     <ClInclude Include="leetcode\二叉树\863.二叉树中所有距离为K的节点.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="leetcode\二叉树\99.恢复二叉搜索树.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
