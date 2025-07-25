@@ -276,6 +276,9 @@
     <ClInclude Include="leetcode\二叉树\99.恢复二叉搜索树.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="leetcode\二叉树\671.二叉树的第二小值.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
