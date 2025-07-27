@@ -138,8 +138,11 @@
     <ClInclude Include="leetcode\870.最大优势洗牌、田忌赛马 .h" />
     <ClInclude Include="leetcode\二分法\0160.寻找峰值.h" />
     <ClInclude Include="leetcode\二分法\33搜索旋转（循环）数组.h" />
+    <ClInclude Include="leetcode\二叉树\109.升序链表转二叉搜索树.h" />
     <ClInclude Include="leetcode\二叉树\1104.之字形路径.h" />
     <ClInclude Include="leetcode\二叉树\1373.二叉搜索树的最大和.h" />
+    <ClInclude Include="leetcode\二叉树\173.二叉搜索树的迭代器.h" />
+    <ClInclude Include="leetcode\二叉树\236.二叉树的最近公共祖先.h" />
     <ClInclude Include="leetcode\二叉树\297.二叉树的序列化与反序列化.h" />
     <ClInclude Include="leetcode\二叉树\331.验证二叉树的前序序列化.h" />
     <ClInclude Include="leetcode\二叉树\437.路径和2.h" />

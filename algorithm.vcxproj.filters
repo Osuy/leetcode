@@ -279,6 +279,15 @@
     <ClInclude Include="leetcode\二叉树\671.二叉树的第二小值.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="leetcode\二叉树\109.升序链表转二叉搜索树.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\二叉树\173.二叉搜索树的迭代器.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\二叉树\236.二叉树的最近公共祖先.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
