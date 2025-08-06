@@ -285,7 +285,22 @@
     <ClInclude Include="leetcode\二叉树\173.二叉搜索树的迭代器.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="leetcode\二叉树\236.二叉树的最近公共祖先.h">
+    <ClInclude Include="leetcode\二叉树\236.二叉树的最近公共祖先（以及扩展题型）.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\二叉树\222.完全二叉树节点数.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\二叉树\难315.右侧更小元素数量.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\二叉树\中215.第K大的元素.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\回溯法（深度优先遍历）\【难】37.解数独.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\回溯法（深度优先遍历）\【难】51.N皇后.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

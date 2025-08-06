@@ -41,3 +41,5 @@ using std::span;
 #include <utility>
 
 using std::pair;
+
+#include <corecrt_math.h>

@@ -142,7 +142,8 @@
     <ClInclude Include="leetcode\二叉树\1104.之字形路径.h" />
     <ClInclude Include="leetcode\二叉树\1373.二叉搜索树的最大和.h" />
     <ClInclude Include="leetcode\二叉树\173.二叉搜索树的迭代器.h" />
-    <ClInclude Include="leetcode\二叉树\236.二叉树的最近公共祖先.h" />
+    <ClInclude Include="leetcode\二叉树\222.完全二叉树节点数.h" />
+    <ClInclude Include="leetcode\二叉树\236.二叉树的最近公共祖先（以及扩展题型）.h" />
     <ClInclude Include="leetcode\二叉树\297.二叉树的序列化与反序列化.h" />
     <ClInclude Include="leetcode\二叉树\331.验证二叉树的前序序列化.h" />
     <ClInclude Include="leetcode\二叉树\437.路径和2.h" />
@@ -158,10 +159,14 @@
     <ClInclude Include="leetcode\二叉树\98.验证二叉搜索树.h" />
     <ClInclude Include="leetcode\二叉树\99.恢复二叉搜索树.h" />
     <ClInclude Include="leetcode\二叉树\TreeNode.h" />
+    <ClInclude Include="leetcode\二叉树\中215.第K大的元素.h" />
+    <ClInclude Include="leetcode\二叉树\难315.右侧更小元素数量.h" />
     <ClInclude Include="leetcode\前缀和\152.最大子数组乘积.h" />
     <ClInclude Include="leetcode\动态规划\53.最大子数组和.h" />
     <ClInclude Include="leetcode\单调栈\1944.可以看到的人数.h" />
     <ClInclude Include="leetcode\单调栈\402.移除k位数字.h" />
+    <ClInclude Include="leetcode\回溯法（深度优先遍历）\【难】37.解数独.h" />
+    <ClInclude Include="leetcode\回溯法（深度优先遍历）\【难】51.N皇后.h" />
     <ClInclude Include="leetcode\广度优先遍历\301.删除无效括号.h" />
     <ClInclude Include="leetcode\数学\50.求幂.h" />
     <ClInclude Include="leetcode\数学\69.求平方根.h" />
