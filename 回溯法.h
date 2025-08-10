@@ -1,9 +1,6 @@
 #pragma once
-
-/*
-
-*/
-
+#include <vector>
+using std::vector;
 /*
 	组合/子集
 		从数组中选取若干元素，选取的顺序无关
@@ -86,3 +83,193 @@
 		排列问题，每层加入未使用元素，于是需要used数组记录使用情况。如果元素有重复，排序，然后跳过未使用的重复项
 			如果选取可重复，则无需记录used
 */
+
+
+/*
+	例1：46全排列
+	数组无重复，所以不用排序
+	每层循环从0开始
+*/
+
+vector<vector<int>> permute(vector<int>& nums) {
+	vector<vector<int>> ans;
+	vector<int> permutation;
+	vector<bool> used(nums.size(), false);
+	auto dfs = [&](this auto&& dfs)
+		{
+			if (permutation.size() == nums.size())
+			{
+				ans.push_back(permutation);
+				return;
+			}
+			for (int i = 0; i < nums.size(); ++i)
+			{
+				if (used[i])continue;
+				permutation.push_back(nums[i]);
+				used[i] = true;
+				dfs();
+				permutation.pop_back();
+				used[i] = false;
+			}
+		};
+
+	dfs();
+
+	return ans;
+}
+
+/*
+	例2：77组合
+	无重复，不可复选，每层循环的区间缩小即可
+*/
+vector<vector<int>> combine(int n, int k) {
+	vector<vector<int>> ans;
+	vector<int> combination;
+	auto dfs = [&](this auto&& dfs, int i)
+		{
+			if (combination.size() == k)
+			{
+				ans.push_back(combination);
+				return;
+			}
+
+			for (int j = i; j <= n; ++j)
+			{
+				combination.push_back(j);
+				dfs(j + 1);
+				combination.pop_back();
+			}
+		};
+
+	dfs(1);
+	return ans;
+}
+
+/*
+	例3：78子集
+	求数组的所有子集。由于子集的元素数量是可以小于数组的，而且还可以是空
+	所以已选元素的所有可能都是一个子集
+	于是无需长度达到size再收集答案，而是对每个已选集合都收集答案
+*/
+
+vector<vector<int>> subsets(vector<int>& nums) {
+	vector<vector<int>> ans;
+	vector<int> subset;
+	auto dfs = [&](this auto&& dfs, int i) -> void
+		{
+			ans.push_back(subset); // 每次选择前，都加入ans
+
+			for (int j = i; j < nums.size(); ++j)
+			{
+				subset.push_back(nums[j]);
+				dfs(j + 1);
+				subset.pop_back();
+			}
+		};
+
+	dfs(0);
+	return ans;
+}
+
+/*
+	例4：47全排列2
+	数组元素可以重复
+	为了能跳过重复，要排序数组，使重复元素相邻
+	除了跳过已使用的元素外
+	还要跳过于前一个相同且前一个未使用的元素，这样才能达成去重排列
+	（一层循环只会选取一个元素，也就是一个元素会被标记为已使用，如果前一个元素是已使用的化
+	说明是上一层循环的，不影响）
+*/
+
+vector<vector<int>> permuteUnique(vector<int>& nums) {
+	sort(nums.begin(), nums.end());// 排序数组，使重复元素相邻
+	vector<vector<int>> ans;
+	vector<int> permutation;
+	vector<bool> used(nums.size(), false);
+	auto dfs = [&](this auto&& dfs)
+		{
+			if (permutation.size() == nums.size())
+			{
+				ans.push_back(permutation);
+				return;
+			}
+			for (int i = 0; i < nums.size(); ++i)
+			{
+				if (used[i])continue;
+				if (i > 0 && nums[i] == nums[i - 1] && !used[i - 1])continue; // 跳过与上一个元素相同且是一个元素未使用的元素
+
+				permutation.push_back(nums[i]);
+				used[i] = true;
+				dfs();
+				permutation.pop_back();
+				used[i] = false;
+			}
+		};
+
+	dfs();
+
+	return ans;
+}
+
+/*
+	例5：90子集2
+	求存在重复元素的数组的子集
+	排序，然后在循环里跳过重复元素
+	注意只跳过本层选择区间里的重复元素，j-1如果不属于可选区间，它即便与区间首个元素相同，但是不影响
+*/
+vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+	sort(nums.begin(), nums.end());
+	vector<vector<int>> ans;
+	vector<int> subset;
+	auto dfs = [&](this auto&& dfs, int i) -> void
+		{
+			ans.push_back(subset);
+
+			for (int j = i; j < nums.size(); ++j)
+			{
+				if (j > i && nums[j] == nums[j - 1])continue; // 跳过重复元素。要保证j - 1 >= i，使它不会访问到非可选区间 
+				subset.push_back(nums[j]);
+				dfs(j + 1);
+				subset.pop_back();
+			}
+		};
+
+	dfs(0);
+	return ans;
+}
+
+/*
+	例6：39组合总和
+		从数组中选取元素，使和为某值
+		一个元素可被多次选取
+
+	每层循环的迭代从i开始而非从i+1开始，就能控制元素的多次选取
+*/
+
+vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+	vector<vector<int>> ans;
+	vector<int> combination;
+	int sum = 0;
+	auto dfs = [&](this auto&& dfs, int i)
+		{
+			if (sum == target)
+			{
+				ans.push_back(combination);
+				return;
+			}
+
+			if (sum > target)return; // 和超过target要退出，否则会无限循环
+
+			for (int j = i; j < candidates.size(); ++j)
+			{
+				combination.push_back(candidates[j]);
+				sum += candidates[j];
+				dfs(j); // 下层循环依然从i开始
+				combination.pop_back();
+				sum -= candidates[j];
+			}
+		};
+
+	dfs(0);
+	return ans;
+}

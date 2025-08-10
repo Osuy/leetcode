@@ -303,6 +303,12 @@
     <ClInclude Include="leetcode\回溯法（深度优先遍历）\【难】51.N皇后.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="leetcode\回溯法（深度优先遍历）\【中】岛屿系列问题.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\回溯法（深度优先遍历）\【中】698.拆分子集.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

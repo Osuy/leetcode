@@ -165,6 +165,8 @@
     <ClInclude Include="leetcode\动态规划\53.最大子数组和.h" />
     <ClInclude Include="leetcode\单调栈\1944.可以看到的人数.h" />
     <ClInclude Include="leetcode\单调栈\402.移除k位数字.h" />
+    <ClInclude Include="leetcode\回溯法（深度优先遍历）\【中】698.拆分子集.h" />
+    <ClInclude Include="leetcode\回溯法（深度优先遍历）\【中】岛屿系列问题.h" />
     <ClInclude Include="leetcode\回溯法（深度优先遍历）\【难】37.解数独.h" />
     <ClInclude Include="leetcode\回溯法（深度优先遍历）\【难】51.N皇后.h" />
     <ClInclude Include="leetcode\广度优先遍历\301.删除无效括号.h" />
