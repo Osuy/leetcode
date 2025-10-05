@@ -11,6 +11,14 @@
 		2.i种硬币凑k-coins[i]
 	可见存在重叠子问题
 
+	许久后再次答题，不能答出。需牢记以下重点：
+	一、求“使用前i种硬币凑额度j的最少数量”时，若额度j - coins[i]时，再加上一枚coins[i]，就是一个答案
+		由于已经求出“使用前i-1种硬币凑额度为j的最少数量”，至少它也是一个答案，所以要两者取较小值
+	二、dp数组的维度一是考虑硬币前i种，维度二是凑出j的额度，这样遍历会更方便
+	三、由于子问题使用了加法，但是答案是求最小值，所以不宜初始化为-1，因为-1随着加法会成为正数，而且会干扰求最小值时的答案
+		初始化为amount+1更为合适
+		因为硬币面值最小是1，所以使用硬币的最大数量是amount，amount+1一定不是答案，所以可以用来初始化
+
 */
 
 int coinChange(vector<int>& coins, int amount) {
@@ -72,24 +80,24 @@ int coinChange(vector<int>& coins, int amount) {
 */
 int coinChange3(vector<int>& coins, int amount)
 {
-	vector<int> memo(amount + 1, -2);
+	vector<int> memo(amount + 1, amount + 1);
 
-	function<int(vector<int>&, int)> dp = [&dp, &memo](vector<int>& coins, int amount)->int
+	auto dfs = [&](this auto&& dfs, int rest)->int
 		{
-			if (amount < 0)return -1;
-			if (amount == 0)return 0;
+			if (rest < 0)return -1;
+			if (rest == 0)return 0;
 
-			if (memo[amount] != -2)return memo[amount];
+			if (memo[rest] != amount + 1)return memo[rest];
 			int res = INT_MAX;
 			for (auto el : coins)
 			{
-				int sub_problem = dp(coins, amount - el);
+				int sub_problem = dfs(rest - el);
 				if (sub_problem == -1)continue;
 				res = std::min(res, 1 + sub_problem);
 			}
-			memo[amount] = INT_MAX == res ? -1 : res;
-			return memo[amount];
+			memo[rest] = INT_MAX == res ? -1 : res;
+			return memo[rest];
 		};
 	
-	return dp(coins, amount);
+	return dfs(amount);
 }

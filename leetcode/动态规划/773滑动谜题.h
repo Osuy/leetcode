@@ -16,8 +16,6 @@
 
 int slidingPuzzle(std::vector<std::vector<int>>& board) {
 	std::string target = "123450";
-	std::priority_queue < int, std::vector<int>, std::greater<int>> q;
-	q.top();
 	std::string origin;
 	int i_index = 0;
 	for (auto& el : board)
@@ -70,4 +68,69 @@ int slidingPuzzle(std::vector<std::vector<int>>& board) {
 	}
 
 	return -1;
+}
+constexpr int near_offset[4] = { 1,-1,3,-3 };
+int slidingPuzzle2(vector<vector<int>>& board) {
+	const string target = "123450";
+	string str;
+	int zero_i = 0;
+	int n = 0;
+	unordered_set<string> used;
+	for (auto& vec : board)
+	{
+		for (auto el : vec)
+		{
+			if (0 == el)
+			{
+				zero_i = n;
+			}
+			++n;
+			str.push_back(el + '0');
+		}
+	}
+	used.insert(str);
+	queue<pair<const string, int>> q;
+	q.emplace(str, zero_i);
+	int step = 0;
+	while (!q.empty())
+	{
+		auto size = q.size();
+		for (auto k = 0; k < size; ++k)
+		{
+			const auto cstr = q.front().first;
+			auto cindex = q.front().second;
+			q.pop();
+
+			if (cstr == target)
+			{
+				return step;
+			}
+
+			for (int i = 0; i < 4; ++i)
+			{
+				if (cindex == 2 && near_offset[i] == 1)continue;
+				if (cindex == 3 && near_offset[i] == -1)continue;
+				int index = cindex + near_offset[i];
+				if (index < 0 || index >5)continue;
+				str = cstr;
+				swap(str[cindex], str[index]);
+				if (used.contains(str))continue;
+				used.insert(str);
+				q.emplace(str, index);
+			}
+		}
+		//324
+		//150
+
+		++step;
+	}
+
+	return -1;
+}
+
+void test773()
+{
+	vector<vector<int>> board{ {3, 2, 4}, {1,5,0} };
+	slidingPuzzle(board);
+	slidingPuzzle2(board);
 }

@@ -75,7 +75,7 @@
     <ClInclude Include="leetcode\752转盘锁.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="leetcode\773滑动谜题.h">
+    <ClInclude Include="leetcode\动态规划\773滑动谜题.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="leetcode\15.三数之和.h">
@@ -307,6 +307,57 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="leetcode\回溯法（深度优先遍历）\【中】698.拆分子集.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\动态规划\【难】115.不同的子序列.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\动态规划\【中】300.最长递增子序列.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\动态规划\【中】931.下降路径最小和.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\回溯法（深度优先遍历）\【难】140.单词拆分2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\回溯法（深度优先遍历）\【中】139.单词拆分.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="leetcode\滑动窗口\53.最大子数组和.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="并查集.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OD卷E\整理扑克牌.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OD卷E\最长连续交替方波.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OD卷E\转骰子.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OD卷E\最长条件字串.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OD卷E\分积木.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OD卷E\最佳种植距离.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OD卷E\数组二叉树的最小叶子节点路径.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="网易烟云笔试题.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OD卷C\特异队列.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OD卷C\OD卷C.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

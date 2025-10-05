@@ -12,7 +12,12 @@
 #include "leetcode/二叉树/297.二叉树的序列化与反序列化.h"
 #include "leetcode/二叉树/98.验证二叉搜索树.h"
 #include "leetcode/动态规划/53.最大子数组和.h"
+#include "OD卷E/最长连续交替方波.h"
+#include "OD卷E/转骰子.h"
+#include "OD卷E/最长条件字串.h"
+#include "网易烟云笔试题.h"
 #include <set>
+#include <numeric>
 using std::cout;
 using std::endl;
 
@@ -40,18 +45,33 @@ public:
 
 int main()
 {
-	B b;
-	B c = b;
-	B d;
-	d = c;
+	//B b;
+	//B c = b;
+	//B d;
+	//d = c;
 
-	std::set<int> s;
-	std::priority_queue<int>q;
-	//test();
-	cout << test221() << endl;
-	cout << test638() << endl;
-	q388::test();
-	q1670::test();
-	q297::test();
+	//std::set<int> s;
+	//std::priority_queue<int>q;
+	////test();
+	//cout << test221() << endl;
+	//cout << test638() << endl;
+	//q388::test();
+	//q1670::test();
+	//q297::test();
+
+	//q1::test();
+	//q3::test();
+	//q4::test();
+
+	// yanyun::test();
+	auto ptr = new char[33554432];
+	std::iota(ptr, ptr + 33554432, 0);
+
+	auto ptr2 = new char[33554432];
+	memcpy(ptr2, ptr, 33554432);
+
+	delete ptr;
+	delete ptr2;
+
 	return 0;
 }
